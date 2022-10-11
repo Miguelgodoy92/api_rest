@@ -35,17 +35,12 @@ class Cliente
     private $telefono;
 
     /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $Cliente;
-
-    /**
      * @ORM\OneToMany(targetEntity=Direccion::class, mappedBy="cliente", orphanRemoval=true)
      */
     private $direcciones;
 
     /**
-     * @ORM\OneToMany(targetEntity=Pedido::class, mappedBy="cliente", orphanRemoval=true)
+     * @ORM\OneToMany(targetEntity=Pedido::class, mappedBy="cliente")
      */
     private $pedido;
 
@@ -92,18 +87,6 @@ class Cliente
     public function setTelefono(int $telefono): self
     {
         $this->telefono = $telefono;
-
-        return $this;
-    }
-
-    public function getCliente(): ?string
-    {
-        return $this->Cliente;
-    }
-
-    public function setCliente(string $Cliente): self
-    {
-        $this->Cliente = $Cliente;
 
         return $this;
     }

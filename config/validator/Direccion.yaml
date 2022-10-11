@@ -1,0 +1,13 @@
+App\Entity\Direccion:
+    properties:
+        calle:
+            - NotBlank: ~
+
+        numero:
+            - NotBlank: ~
+
+        puertaPisoEscalera:
+            - NotBlank: ~
+
+        codPostal:
+            - NotBlank: ~
